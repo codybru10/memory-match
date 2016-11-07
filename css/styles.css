@@ -1,0 +1,39 @@
+html, body {
+  height: 100%;
+}
+
+
+h1 {
+  min-height: 100px;
+  width: 100%;
+  background: #667D85;
+  border: 3px solid #000;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  padding-top: 20px;
+}
+
+
+.container {
+  height: 100%;
+}
+
+.board {
+  width: 100%;
+  height: 50%;
+  margin: 15px auto;
+}
+
+.grid {
+  width: 25%;
+  float: left;
+}
+
+.grid h1 {
+  height: 250px;
+}
+
+button {
+  margin-top: 15px;
+}
