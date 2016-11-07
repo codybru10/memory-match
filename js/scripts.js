@@ -8,17 +8,17 @@ var indexOfgridCoords2;
 
 
  var matchFinder = function() {
-   for (i = 0; i < boardGame.someArray.length; i++) {
+   for (i = 0; i < boardGame.gridCoords1.length; i++) {
 
-     if (boardGame.someArray[i] === "clicked") {
-        indexOfgridCoords1 = boardGame.someArray.indexOf(boardGame.someArray[i]);
+     if (boardGame.gridCoords1[i] === "clicked") {
+        indexOfgridCoords1 = boardGame.gridCoords1.indexOf(boardGame.gridCoords1[i]);
      }
    }
 
-    for (i = 0; i < boardGame.somegridCoords2.length; i++) {
+    for (i = 0; i < boardGame.gridCoords2.length; i++) {
 
-     if (boardGame.somegridCoords2[i] === "clicked") {
-        indexOfgridCoords2 = boardGame.somegridCoords2.indexOf(boardGame.somegridCoords2[i]);
+     if (boardGame.gridCoords2[i] === "clicked") {
+        indexOfgridCoords2 = boardGame.gridCoords2.indexOf(boardGame.gridCoords2[i]);
      }
     }
 
