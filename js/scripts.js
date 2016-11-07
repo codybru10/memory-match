@@ -2,6 +2,7 @@ var cardSpot;
 
 
 $(document).ready(function(){
+
   $(".grid").click(function() {
     cardSpot = parseInt($(this).attr("id")); // grabs id and converts to number
 
@@ -10,6 +11,10 @@ $(document).ready(function(){
     };
 
   showImage(cardSpot);
+
+  setTimeout(function(){ alert("Hello"); }, 3000);
+
+
 
   });
 
