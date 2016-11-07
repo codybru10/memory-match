@@ -24,22 +24,19 @@ var boardSection;
 // }
 
 Board.prototype.boardCheck = function(boardsection, currentCard) {
-  if (boardsection === 2) {
-    theBoard.gridCoords1[currentCard] = "clicked";
-    return "board 2"
-  } else if (boardsection === 3) {
-    theBoard.gridCoords2[currentCard] = "clicked";
-    return "board 3"
+
+  if (boardsection === 98) {
+    return "board 98";
+  } else if (boardsection === 99) {
+    return "board 99";
   }
 }
 
-Board.prototype.cardStateChanger = function(currentCard) {
+Board.prototype.cardStateChanger = function(currentCard, boardsection) {
 
-  var boardsection = theBoard.boardCheck(boardSection, currentCard);
-
-  if (boardsection === "board 2") {
+  if (boardsection === "board 98") {
     theBoard.gridCoords1[currentCard] = "clicked";
-  } else if (boardsection === "board 3") {
+  } else if (boardsection === "board 99") {
     theBoard.gridCoords2[currentCard] = "clicked";
   }
 
@@ -62,26 +59,26 @@ Board.prototype.matchFinder = function() {
    }
 
     if (indexOfgridCoords1 === indexOfgridCoords2) {
-     var showImage = function(cardSpot) {
-        $("." + cardSpot).html("");
-        $("." + cardSpot).html("<h1><img class=' img-responsive' src='img/" + cardSpot + ".jpg'></h1>"); // Inserts image in proper grid square by ID
-      };
 
-    showImage(cardSpot);
+      showImage(cardSpot);
     } else {
-      var cardBack = function(cardSpot) {
-      $("." + cardSpot).html("");
-      $("." + cardSpot).html("<h1><img src='img/question.jpg'></h1>");//inserts question image after x seconds
-         setTimeout(function(){
-      cardBack(cardSpot);
-     }, 500);
-    }
-
+      setTimeout(function(){
+   cardBack(cardSpot);
+  }, 500);
   }
 
 }
 
+var showImage = function(cardSpot) {
+   $("." + boardSection).find("." + cardSpot).html("");
+   $("." + boardSection).find("." + cardSpot).html("<h1><img class='img-responsive' src='img/" + cardSpot + ".jpg'></h1>"); // Inserts image in proper grid square by ID
+ };
 
+ var cardBack = function(cardSpot) {
+  $("." + boardSection).find("." + cardSpot).html("");
+  $("." + boardSection).find("." + cardSpot).html("<h1><img class=class='img-responsive' src='img/question.jpg'></h1>"); //inserts question image
+
+}
 
 
 
@@ -94,13 +91,12 @@ $(document).ready(function(){
   });
 
   $(".grid").click(function() {
-    debugger;
     cardSpot = parseInt($(this).attr("class")); // grabs id and converts to number
     boardSection = parseInt($(this).parent().attr("class"));
+    showImage(cardSpot);
+    theBoard.cardStateChanger(cardSpot, boardSection);
 
-    theBoard.cardStateChanger(cardSpot);
-
-    theBoard.matchFinder();
+    // theBoard.matchFinder();
 
 
 
