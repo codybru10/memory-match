@@ -4,15 +4,22 @@ var cardSpot;
 $(document).ready(function(){
 
   $(".grid").click(function() {
-    cardSpot = parseInt($(this).attr("id")); // grabs id and converts to number
+    cardSpot = parseInt($(this).attr("class")); // grabs id and converts to number
 
     var showImage = function(cardSpot) {
-      $("#" + cardSpot).html("<img class='img-responsive' src='img/" + cardSpot + ".jpg'>"); // Inserts image in proper grid square by ID
+      $("." + cardSpot).html("");
+      $("." + cardSpot).html("<h1><img class=' img-responsive' src='img/" + cardSpot + ".jpg'></h1>"); // Inserts image in proper grid square by ID
     };
 
   showImage(cardSpot);
 
-  setTimeout(function(){ alert("Hello"); }, 3000);
+  var imageReveal = function(cardSpot) {
+    debugger;
+    $("." + cardSpot).html("");
+    $("." + cardSpot).html("<h1><img src='img/question.jpg'></h1>");//inserts question image after 5 seconds
+  }
+
+  setTimeout(function(){ imageReveal(cardSpot); }, 5000);
 
 
 
