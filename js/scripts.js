@@ -23,7 +23,7 @@ var boardSection;
 //   }
 // }
 
-Board.prototype.boardCheck = function(boardsection, currentCard) {
+var boardCheck = function(boardsection) {
 
   if (boardsection === 98) {
     return "board 98";
@@ -33,6 +33,8 @@ Board.prototype.boardCheck = function(boardsection, currentCard) {
 }
 
 Board.prototype.cardStateChanger = function(currentCard, boardsection) {
+
+   var boardsection = boardCheck(boardSection);
 
   if (boardsection === "board 98") {
     theBoard.gridCoords1[currentCard] = "clicked";
