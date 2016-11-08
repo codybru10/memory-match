@@ -68,34 +68,35 @@ var pictureTimer = function() {
 
   showImage(indexOfgridCoords2);
   setTimeout(function() {
-  cardBack2(indexOfgridCoords1, indexOfgridCoords2); }, 3000);
+  cardBack2(indexOfgridCoords1, indexOfgridCoords2); }, 1500);
+  theBoard = new Board;
 }
 
 var showImage = function(cardSpot) {
 
    $("." + boardSection).find("." + cardSpot).html("");
-   $("." + boardSection).find("." + cardSpot).html("<h1><img class='img-responsive' src='img/" + cardSpot + ".jpg'></h1>"); // Inserts image in proper grid square by ID
+   $("." + boardSection).find("." + cardSpot).html("<h1><img class='img-responsive' src='pac12/" + cardSpot + ".jpg'></h1>"); // Inserts image in proper grid square by ID
  };
 
 var showImage2 = function(indexOfgridCoords1,indexOfgridCoords2) {
    $("." + boardSection).find("." + indexOfgridCoords1).html("");
-   $("." + boardSection).find("." + indexOfgridCoords1).html("<h1><img class='img-responsive' src='img/" + cardSpot + ".jpg'></h1>"); // Inserts image in proper grid square by ID
+   $("." + boardSection).find("." + indexOfgridCoords1).html("<h1><img class='img-responsive' src='pac12/" + cardSpot + ".jpg'></h1>"); // Inserts image in proper grid square by ID
    $("." + boardSection).find("." + indexOfgridCoords2).html("");
-   $("." + boardSection).find("." + indexOfgridCoords2).html("<h1><img class='img-responsive' src='img/" + cardSpot + ".jpg'></h1>"); // Inserts image in proper grid square by ID
+   $("." + boardSection).find("." + indexOfgridCoords2).html("<h1><img class='img-responsive' src='pac12/" + cardSpot + ".jpg'></h1>"); // Inserts image in proper grid square by ID
  };
 
  var cardBack = function(cardSpot) {
   $("." + boardSection).find("." + cardSpot).html("");
-  $("." + boardSection).find("." + cardSpot).html("<h1><img class=class='img-responsive' src='img/question.jpg'></h1>"); //inserts question image
+  $("." + boardSection).find("." + cardSpot).html("<h1><img class=class='img-responsive' src='pac12/cover.jpg'></h1>"); //inserts question image
 
 }
 
  var cardBack2 = function(cardSpot1,cardSpot2) {
 
   $(".98").find("." + cardSpot1).html("");
-  $(".98").find("." + cardSpot1).html("<h1><img class=class='img-responsive' src='img/question.jpg'></h1>"); //inserts question image
+  $(".98").find("." + cardSpot1).html("<h1><img class=class='img-responsive' src='pac12/cover.jpg'></h1>"); //inserts question image
   $(".99").find("." + cardSpot2).html("");
-  $(".99").find("." + cardSpot2).html("<h1><img class=class='img-responsive' src='img/question.jpg'></h1>"); //inserts question image
+  $(".99").find("." + cardSpot2).html("<h1><img class=class='img-responsive' src='pac12/cover.jpg'></h1>"); //inserts question image
   indexOfgridCoords1 = undefined;
   indexOfgridCoords2 = undefined;
 }
