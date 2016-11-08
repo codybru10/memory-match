@@ -1,0 +1,68 @@
+html {
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Graduate', cursive;
+  background: url('../pac12/lights.jpg') center no-repeat;
+  min-height: 100%;
+  background-size: cover;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+.container {
+  height: 100%;
+}
+
+.board {
+  width: 100%;
+  height: 50%;
+  margin: 15px auto;
+}
+#last {
+  display: none;
+}
+.grid {
+  width: 25%;
+  float: left;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-bottom: 7px;
+  padding-top: 7px;
+}
+
+.header-banner {
+  background: url("../pac12/header.jpg") center no-repeat;
+  height: 145px;
+  width: 700px;
+  text-align: center;
+  color: #fff;
+  margin: 0 auto;
+  box-shadow: 0 0 15px 5px black;
+
+}
+
+.header-banner h1 {
+  position: relative;
+  top: 15px;
+}
+
+.form-group {
+  text-align: center;
+  margin-top: 40px;
+  color: white;
+}
+
+button {
+  position: relative;
+  top: 10px;
+  background-color: #017f1c;
+  color: white;
+}
+
+img {
+ box-shadow: 0 0 15px 5px lightgrey;
+}

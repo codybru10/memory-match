@@ -11,19 +11,6 @@ var boardSection;
 var indexOfgridCoords1;
 var indexOfgridCoords2;
 
-// Board.prototype.cardState = function(currentCard) {
-//
-//   for (i = 0; i < theBoard.gridCoords.length; i++) {
-//
-//   if (theBoard.gridCoords[i] === "clicked") {
-//     // this code executes when it find a clicked grid
-//       console.log(theBoard.gridCoords.indexOf(theBoard.gridCoords[i]));
-//       theBoard.gridCoords[i] = i;
-//     }
-//
-//   }
-// }
-
 var boardCheck = function(boardsection) {
 
   if (boardsection === 98) {
@@ -47,6 +34,7 @@ Board.prototype.cardStateChanger = function(currentCard, boardsection) {
 
 Board.prototype.matchFinder = function() {
 
+
   for (i = 0; i < theBoard.gridCoords1.length; i++) {
 
     if (theBoard.gridCoords1[i] === "clicked") {
@@ -63,7 +51,6 @@ Board.prototype.matchFinder = function() {
     }
    }
 
-   debugger;
    if (indexOfgridCoords1 === indexOfgridCoords2) {
      theBoard.gridCoords1[indexOfgridCoords1] = "matched";
      theBoard.gridCoords2[indexOfgridCoords2] = "matched";
@@ -75,27 +62,17 @@ Board.prototype.matchFinder = function() {
    } else {
      showImage(cardSpot);
    }
-
-
-
-    //if (indexOfgridCoords1 === indexOfgridCoords2) {
-      //showImage2(indexOfgridCoords1,indexOfgridCoords2);
-  //  } else if (indexOfgridCoords1 !== indexOfgridCoords2 && indexOfgridCoords2 !== undefined && indexOfgridCoords1 !== undefined) {
-  //    cardBack2(indexOfgridCoords1,indexOfgridCoords2);
-    //  for (i = 0; i)
-//  }
-
 }
 
 var pictureTimer = function() {
-debugger;
+
   showImage(indexOfgridCoords2);
   setTimeout(function() {
   cardBack2(indexOfgridCoords1, indexOfgridCoords2); }, 3000);
 }
 
 var showImage = function(cardSpot) {
-debugger;
+
    $("." + boardSection).find("." + cardSpot).html("");
    $("." + boardSection).find("." + cardSpot).html("<h1><img class='img-responsive' src='img/" + cardSpot + ".jpg'></h1>"); // Inserts image in proper grid square by ID
  };
@@ -114,7 +91,7 @@ var showImage2 = function(indexOfgridCoords1,indexOfgridCoords2) {
 }
 
  var cardBack2 = function(cardSpot1,cardSpot2) {
-  debugger;
+
   $(".98").find("." + cardSpot1).html("");
   $(".98").find("." + cardSpot1).html("<h1><img class=class='img-responsive' src='img/question.jpg'></h1>"); //inserts question image
   $(".99").find("." + cardSpot2).html("");
