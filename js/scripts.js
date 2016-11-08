@@ -43,7 +43,10 @@ Board.prototype.cardStateChanger = function(currentCard, boardsection) {
 
 }
 
-Board.prototype.matchFinder = function(indexOfgridCoords1, indexOfgridCoords2) {
+Board.prototype.matchFinder = function() {
+
+  var indexOfgridCoords1;
+  var indexOfgridCoords2;
 
   for (i = 0; i < theBoard.gridCoords1.length; i++) {
 
@@ -67,7 +70,7 @@ Board.prototype.matchFinder = function(indexOfgridCoords1, indexOfgridCoords2) {
     } else {
       setTimeout(function(){
    cardBack(cardSpot);
-  }, 500);
+ }, 2000);
   }
 
 }
