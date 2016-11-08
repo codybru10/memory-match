@@ -4,8 +4,7 @@ function Board(){
   this.gridCoords2 = [0, 1, 2, 3, 4, 5, 6, 7]
 }
 
-var indexOfgridCoords1;
-var indexOfgridCoords2;
+
 var theBoard;
 var cardSpot;
 var boardSection;
@@ -44,12 +43,13 @@ Board.prototype.cardStateChanger = function(currentCard, boardsection) {
 
 }
 
-Board.prototype.matchFinder = function() {
+Board.prototype.matchFinder = function(indexOfgridCoords1, indexOfgridCoords2) {
 
   for (i = 0; i < theBoard.gridCoords1.length; i++) {
 
     if (theBoard.gridCoords1[i] === "clicked") {
        indexOfgridCoords1 = theBoard.gridCoords1.indexOf(theBoard.gridCoords1[i]);
+       theBoard.gridCoords1[i] = i;
     }
   }
 
@@ -57,6 +57,7 @@ Board.prototype.matchFinder = function() {
 
     if (theBoard.gridCoords2[i] === "clicked") {
        indexOfgridCoords2 = theBoard.gridCoords2.indexOf(theBoard.gridCoords2[i]);
+       theBoard.gridCoords2[i] = i;
     }
    }
 
@@ -98,7 +99,7 @@ $(document).ready(function(){
     showImage(cardSpot);
     theBoard.cardStateChanger(cardSpot, boardSection);
 
-    // theBoard.matchFinder();
+    theBoard.matchFinder();
 
 
 
