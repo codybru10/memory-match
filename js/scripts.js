@@ -121,7 +121,6 @@ var showImage2 = function(indexOfgridCoords1,indexOfgridCoords2) {
   $(".99").find("." + cardSpot2).html("<h1><img class=class='img-responsive' src='img/question.jpg'></h1>"); //inserts question image
   indexOfgridCoords1 = undefined;
   indexOfgridCoords2 = undefined;
-
 }
 
 
