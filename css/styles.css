@@ -1,5 +1,5 @@
-html, body {
-  height: 100%;
+html {
+    border: 10px solid white;
 }
 body {
   background: url("../img/background3.jpg");
@@ -12,7 +12,7 @@ h1 {
   box-shadow: 2px 2px 10px 3px rgb(15,130,200);
   margin-top: 20px;
   text-align: center;
-  color: rgb(15,130,200);
+  color: #5ccff9;
   font-family: 'Orbitron', sans-serif;
 }
 img {
@@ -28,7 +28,9 @@ img {
   height: 50%;
   margin: 15px auto;
 }
-
+#last {
+  display: none;
+}
 .grid {
   width: 25%;
   float: left;
@@ -37,11 +39,33 @@ img {
   padding-bottom: 7px;
   padding-top: 7px;
 }
-
 .grid h1 {
   height: 250px;
 }
 
+h1:hover {
+  box-shadow: 8px 8px 10px 4px white;
+}
+
 button {
   margin-top: 15px;
+  text-align: center;
+}
+
+button:hover {
+  margin-top: 15px;
+  box-shadow: 5px 5px 10px 3px white;
+}
+.btn {
+  background-color: #5ccff9;
+  box-shadow: 2px 2px 10px 3px rgb(15,130,200);
+  font-family: 'Orbitron', sans-serif;
+}
+
+.form-group {
+  color: white;
+}
+
+.textbox2 {
+  text-align: justify;
 }

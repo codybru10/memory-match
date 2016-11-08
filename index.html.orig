@@ -12,10 +12,10 @@
   <body>
     <div class="container">
       <h1>Memory Match!</h1>
-
+<<<<<<< HEAD
 
       <div class="98 board">
-
+=======
       <div class="row">
         <div class="form-group col-md-6">
           <label class="textbox1" for="text">Player 1 Log-In</label><br>
@@ -28,7 +28,7 @@
       </div>
       <button type="submit" class="btn">Start!</button>
       <div class="board">
-
+>>>>>>> jp/cb-tlk
         <div class="0 grid">
           <h1><img src="img/question.jpg" alt="?"/><span></span></h1>
         </div>
@@ -80,6 +80,9 @@
         <div class="7 grid">
           <h1><img src="img/question.jpg" alt="?"/><span></span></h1>
         </div>
+      </div>
+        <button type="button" id="startGame">Start game</button>
+      </div>
     </div>
     <div class="output">
       <h3 id="last">The Winner is<span class="player"></span></h3>
