@@ -132,8 +132,6 @@ debugger;
   firstCard = undefined;
   secondCard = undefined;
 }
-
-
 // Front End Logic
 
 $(document).ready(function(){
