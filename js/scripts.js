@@ -35,6 +35,7 @@ Board.prototype.cardStateChanger = function(currentCard, boardsection) {
 Board.prototype.matchFinder = function() {
 
 
+
   for (i = 0; i < theBoard.gridCoords1.length; i++) {
 
     if (theBoard.gridCoords1[i] === "clicked") {
@@ -57,16 +58,16 @@ Board.prototype.matchFinder = function() {
      showImage2(indexOfgridCoords1,indexOfgridCoords2);
      indexOfgridCoords1 = undefined;
      indexOfgridCoords2 = undefined;
+     theBoard = new Board;
    } else if (indexOfgridCoords1 !== indexOfgridCoords2 && indexOfgridCoords2 !== undefined && indexOfgridCoords1 !== undefined) {
       pictureTimer();
+
    } else {
      showImage(cardSpot);
    }
 }
 
 var pictureTimer = function() {
-
-  showImage(indexOfgridCoords2);
   setTimeout(function() {
   cardBack2(indexOfgridCoords1, indexOfgridCoords2); }, 1500);
   theBoard = new Board;
@@ -112,9 +113,10 @@ $(document).ready(function(){
   });
 
   $(".grid").click(function() {
+
     cardSpot = parseInt($(this).attr("class")); // grabs id and converts to number
     boardSection = parseInt($(this).parent().attr("class"));
-    //showImage(cardSpot);
+    showImage(cardSpot);
     theBoard.cardStateChanger(cardSpot, boardSection);
 
     theBoard.matchFinder();
