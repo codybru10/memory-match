@@ -18,6 +18,7 @@ Board.prototype.arrayMatcher = function(cardSpot) {
     theBoard = new Board;
   } else if (firstCard !== cardSpot && cardSpot !== undefined && firstCard !== undefined) {
     secondCard = theBoard.oneArray.indexOf(theBoard.oneArray[cardSpot]);
+    clickEventChanger();
     pictureTimer();
   } else {
     showImage(cardSpot);
@@ -25,15 +26,37 @@ Board.prototype.arrayMatcher = function(cardSpot) {
   }
 }
 
+
 var pictureTimer = function() {
 
   showImage(secondCard);
   setTimeout(function() {
   cardBack2(firstCard,secondCard); }, 1500);
+
   theBoard = new Board;
 }
 
+var handler = function(e){
+  $(".grid").click(function() {
+     cardSpot = parseInt($(this).attr("class")); // grabs id and converts to number
+    theBoard.arrayMatcher(cardSpot);
+  });
+}
+
+var clickEventChanger = function() {
+debugger;
+   $(".grid").off("click");
+   setTimeout(function() { $(".grid").on("click", handler);  }, 1600);
+}
+
+// var clickEventChanger = function() {
+//
+//    $(".grid").removeClass("grid");
+//   setTimeout(function() { $(".box").addClass("grid");  }, 10000);
+// }
+
 var showImage = function(cardSpot) {
+
     if (cardSpot > 7)  {
     $(".board").find("." + cardSpot).html("");
     $(".board").find("." + cardSpot).html("<h1><img class='img-responsive' src='pac12/" + (cardSpot - 8) + ".jpg'></h1>"); // Inserts image in proper grid square by ID
@@ -60,6 +83,7 @@ var showImage2 = function(firstCard, secondCard) {
  };
 
  var cardBack = function(cardSpot) {
+
   $("." + boardSection).find("." + cardSpot).html("");
   $("." + boardSection).find("." + cardSpot).html("<h1><img class=class='img-responsive' src='pac12/cover.jpg'></h1>"); //inserts question image
 }
@@ -81,9 +105,8 @@ $(document).ready(function(){
   $("#startGame").click(function() {
     theBoard = new Board;
   });
-  $(".grid").click(function() {
 
-     cardSpot = parseInt($(this).attr("class")); // grabs id and converts to number
-    theBoard.arrayMatcher(cardSpot);
-  });
+  handler();
+
+
 });

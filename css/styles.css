@@ -9,6 +9,10 @@ body {
   background-size: cover;
 }
 
+.disabler {
+  pointer-events: none;
+}
+
 img {
   width: 100%;
   height: 100%;
@@ -25,7 +29,7 @@ img {
 #last {
   display: none;
 }
-.grid {
+.grid, .box {
   width: 25%;
   float: left;
   padding-left: 7px;
