@@ -9,6 +9,11 @@ body {
   background-size: cover;
 }
 
+.winner {
+  display: none;
+  text-align: center;
+}
+
 .disabler {
   pointer-events: none;
 }
