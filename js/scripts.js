@@ -36,7 +36,7 @@ Board.prototype.arrayMatcher = function(cardSpot) {
 var pictureTimer = function() {
   showImage(secondCard);
   setTimeout(function() {
-  cardBack2(firstCard,secondCard); }, 1500);
+  cardBack2(firstCard,secondCard); }, 650);
   theBoard = new Board;
 
 }
