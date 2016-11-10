@@ -2,7 +2,7 @@
 
 #### _Test your memory by trying to find all the matching pairs within the grid. November 9th, 2016_
 
-#### By _**Cody Brubaker, James Pedilla, Margie Nevarez, Taylor Loftis-Kim**_
+#### By _**Cody Brubaker, James Padilla, Margie Nevarez, Taylor Loftis-Kim**_
 
 ## Description
 
